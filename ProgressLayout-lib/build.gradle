@@ -1,0 +1,46 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+apply plugin: 'signing'
+
+version = "1.0.0"
+group = "com.oxzimo"
+
+configurations {
+    archives {
+        extendsFrom configurations.default
+    }
+}
+
+signing {
+    required { has("release") && gradle.taskGraph.hasTask("uploadArchives") }
+    sign configurations.archives
+}
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.1.0"
+
+    defaultConfig {
+        applicationId "com.oxzimo.progresslayout"
+        minSdkVersion 10
+        targetSdkVersion 19
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:+'
+    }
+}

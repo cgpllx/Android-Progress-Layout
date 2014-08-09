@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ProgressLayout.iml" filepath="$PROJECT_DIR$/ProgressLayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProgressLayout-SampleApp.iml" filepath="$PROJECT_DIR$/ProgressLayout-SampleApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProgressLayout-lib/ProgressLayout-lib.iml" filepath="$PROJECT_DIR$/ProgressLayout-lib/ProgressLayout-lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProgressLayout-sample/ProgressLayout-sample.iml" filepath="$PROJECT_DIR$/ProgressLayout-sample/ProgressLayout-sample.iml" />
+    </modules>
+  </component>
+</project>
+
