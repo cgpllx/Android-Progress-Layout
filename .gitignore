@@ -3,3 +3,5 @@
 /.idea/workspace.xml
 .DS_Store
 /build
+/ProgressLayout-sample/src/androidTest
+/ProgressLayout-lib/src/androidTest
