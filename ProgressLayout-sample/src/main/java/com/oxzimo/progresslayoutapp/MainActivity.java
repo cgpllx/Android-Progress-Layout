@@ -18,6 +18,9 @@ package com.oxzimo.progresslayoutapp;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import com.oxzimo.progresslayout.ProgressLayout;
 
@@ -32,6 +35,22 @@ public class MainActivity extends ActionBarActivity {
         progressLayout = (ProgressLayout) findViewById(R.id.progress_layout);
         progressLayout.init();
         new Task().execute();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_refresh) {
+            new Task().execute();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     public class Task extends AsyncTask<Void, Void, Boolean> {
